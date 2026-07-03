@@ -1,0 +1,89 @@
+{
+  "programName": "2026 KT K-PATH 지원기업",
+  "header": { "enabled": false },
+  "footer": { "enabled": false },
+  "outputPrefix": "KPATH_지원기업프로필",
+  "fileNameField": "기업명",
+  "nameField": "기업명",
+  "subtitleField": "제품, 서비스명",
+
+  "overviewGroups": [
+    {
+      "rows": [
+        { "label": "지원 분야",         "field": "지원 분야",          "type": "plain" },
+        { "label": "기업 연혁",         "field": "기업 연혁",          "type": "plain" },
+        { "label": "최근 총 고용인원",  "field": "최근 총 고용인원",   "type": "plain" },
+        { "label": "2025 매출액",       "field": "2025 매출액(원)",    "type": "money" },
+        { "label": "최종 투자유치 단계","field": "최종 투자유치 단계", "type": "plain" },
+        { "label": "홈페이지",          "field": "홈페이지 주소",      "type": "link"  },
+        { "label": "관심 트랙",         "field": "__관심트랙_통합",    "type": "plain", "span": 2 }
+      ]
+    },
+    {
+      "rows": [
+        { "label": "사업자번호",   "field": "사업자번호",   "type": "plain" },
+        { "label": "총괄책임자",   "field": "총괄책임자",   "type": "plain" },
+        { "label": "총괄 직급",    "field": "총괄 직급",    "type": "plain" },
+        { "label": "총괄 연락처",  "field": "총괄 연락처",  "type": "plain" },
+        { "label": "총괄 이메일",  "field": "총괄 이메일",  "type": "plain" },
+        { "label": "실무자명",     "field": "실무자명",     "type": "plain" },
+        { "label": "실무자 연락처","field": "실무자 연락처","type": "plain" },
+        { "label": "실무자 이메일","field": "실무자 이메일","type": "plain" }
+      ]
+    }
+  ],
+
+  "sections": [
+    { "heading": "제품·서비스 소개", "field": "제품 서비스 소개", "emptyText": "-" },
+    { "heading": "주요 성과",       "field": "주요 성과",         "emptyText": "-" },
+    { "heading": "기대사항",        "field": "__기대사항_통합",   "emptyText": "-" },
+    { "heading": "투자유치 이력",   "field": "투자유치 이력",     "emptyText": "-" }
+  ],
+
+  "optionalTextSection": {
+    "heading": "기타; 제안 아이디어",
+    "field": "기타; 제안 아이디어"
+  },
+
+  "linkSection": {
+    "heading": "사업계획서",
+    "field": "사업계획서",
+    "linkLabel": "사업계획서 파일 열기 ↗"
+  },
+
+  "panel": { "enabled": false },
+
+  "dataTablesCondField": "__has_innoclaw",
+  "dataTables": [
+    {
+      "heading": "고용 현황",
+      "chartField": "__chart_employment",
+      "chartAspect": 4.75,
+      "chartWidthPx": 640
+    },
+    {
+      "heading": "재무 현황 (자산·부채·자본)",
+      "chartField": "__chart_financial",
+      "chartAspect": 4.34,
+      "chartWidthPx": 620,
+      "columns": ["2023", "2024", "2025", "3개년 성장률"],
+      "rows": [
+        { "label": "자산", "fields": ["2023년 자산","2024년 자산","2025년 자산","최근 3개년 재무 성장률"], "types": ["money","money","money","percent"] },
+        { "label": "부채", "fields": ["2023년 부채","2024년 부채","2025년 부채","부채성장률_3개년"], "types": ["money","money","money","percent"] },
+        { "label": "자본", "fields": ["2023년 자본","2024년 자본","2025년 자본","자본성장률_3개년"], "types": ["money","money","money","percent"] }
+      ]
+    },
+    {
+      "heading": "매출·손익 현황",
+      "chartField": "__chart_revenue",
+      "chartAspect": 4.34,
+      "chartWidthPx": 620,
+      "columns": ["2023", "2024", "2025", "3개년 성장률"],
+      "rows": [
+        { "label": "매출액",   "fields": ["2023년 매출(원)","2024년 매출(원)","2025년 매출(원)","3개년 매출(원) 성장률"], "types": ["money","money","money","percent"] },
+        { "label": "영업이익", "fields": ["2023 영업이익","2024 영업이익","2025 영업이익","3개년 영업이익 성장률"], "types": ["money","money","money","percent"] },
+        { "label": "순이익",   "fields": ["2023 순이익","2024 순이익","2025 순이익","3개년 순이익 성장률"], "types": ["money","money","money","percent"] }
+      ]
+    }
+  ]
+}

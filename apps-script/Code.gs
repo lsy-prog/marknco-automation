@@ -128,7 +128,13 @@ function triggerRoutine_(props) {
   const resp = UrlFetchApp.fetch(url, {
     method: "post",
     contentType: "application/json",
-    headers: { Authorization: "Bearer " + token },
+    headers: {
+      Authorization: "Bearer " + token,
+      "anthropic-version": "2023-06-01",
+      // Routine API가 아직 research preview라 베타 헤더가 필요할 수 있음.
+      // 이 헤더 때문에 다른 에러(예: "beta header" 관련)가 나면 이 줄을 지우고 재시도할 것.
+      "anthropic-beta": "experimental-cc-routine-2026-04-01",
+    },
     payload: JSON.stringify({
       text: "새 데이터가 반영됐습니다. input/latest.xlsx 기준으로 PDF를 다시 생성해주세요.",
     }),

@@ -16,7 +16,43 @@
 
 ---
 
-## 준비물
+## ⚠️ 지금 막혀있는 문제 — GitHub 쓰기 권한
+
+Routine이 처음 실행됐을 때 PDF는 정상적으로 다 만들었는데, **GitHub에 결과를 못 올리고
+있어요** (`403 Resource not accessible by integration`). Routine에 연결된 GitHub App이
+이 저장소에 **읽기 권한만** 가지고 있어서 그래요. 이것부터 고쳐야 자동화가 완성됩니다.
+
+**고치는 법**
+1. GitHub → 저장소 페이지 → **Settings**
+2. 왼쪽 메뉴에서 **Integrations → GitHub Apps** (또는 조직 계정이면 조직 Settings →
+   Third-party Access → GitHub Apps)
+3. **Claude** (또는 Claude Code) 앱 찾아서 **Configure**
+4. **Repository permissions → Contents** 를 **Read and write** 로 변경
+5. 저장
+
+또는:
+1. `claude.ai/code/routines` 에서 이 루틴 열기
+2. 저장소 연결 부분에서 **재연결(reconnect)** 하면서 권한 승인 화면이 다시 뜨면
+   그때 "Contents: Read and write" 승인
+
+권한 고친 다음엔 시트에서 "PDF 생성 요청"을 다시 눌러서(또는 Routine을 "Run Now") 재실행하면
+이번엔 `output/` 폴더에 결과가 올라올 거예요.
+
+---
+
+## 스킬이 2개예요 — 어떤 데이터인지에 따라 자동으로 골라 씁니다
+
+- `skills/marknco-profile-doc/` — **롱리스트**용 (혁신의숲 스크리닝 데이터, "전체 후보" 시트)
+- `skills/marknco-applicant-profile/` — **K-PATH 접수시트**용 (지원기업 신청서, "정리 시트"
+  + "innoclaw 데이터" 두 시트)
+
+Routine 프롬프트가 `input/latest.xlsx`의 시트 이름을 보고 알아서 맞는 스킬을 골라 씁니다.
+접수시트 쪽은 혁신의숲 데이터가 아직 안 붙은 신규 지원기업은 **1페이지만**, 붙은 기업은
+**2페이지**(성장 데이터 포함)로 자동으로 갈립니다 — 정상 동작이에요.
+
+---
+
+
 
 - GitHub 계정 (조직 계정이면 더 좋음 — 담당자 개인 계정에 묶이지 않게)
 - Claude Pro/Max/Team/Enterprise 플랜 + Claude Code 사용 가능 (Routines는 "Claude Code on the web" 활성화 필요)
