@@ -1,0 +1,46 @@
+{
+  "programName": "2026 KT K-PATH 롱리스트",
+  "header": { "enabled": false },
+  "footer": { "enabled": false },
+  "outputPrefix": "KPATH_롱리스트프로필",
+  "fileNameField": "기업명",
+  "nameField": "기업명",
+  "subtitleField": "한 줄 소개",
+
+  "overviewGroups": [
+    {
+      "rows": [
+        { "label": "모집분야",     "field": "모집분야",     "type": "plain" },
+        { "label": "설립일",       "field": "설립일",       "type": "plain" },
+        { "label": "대표자명",     "field": "대표자명",     "type": "plain" },
+        { "label": "홈페이지",     "field": "홈페이지",     "type": "link"  },
+        { "label": "성과키워드",   "field": "성과키워드",   "type": "plain" },
+        { "label": "최신고용인원", "field": "최신고용인원", "type": "plain" }
+      ]
+    },
+    {
+      "rows": [
+        { "label": "최신투자단계",       "field": "최신투자단계",             "type": "plain", "span": 2 },
+        { "label": "최신투자일",         "field": "최신투자일",               "type": "plain" },
+        { "label": "최신투자금액",       "field": "최신투자금액(원)",         "type": "money" },
+        { "label": "누적투자금액",       "field": "누적투자금액(원)",         "type": "money" },
+        { "label": "기업가치 최대추정액","field": "기업가치 최대추정액(원)", "type": "money" }
+      ]
+    }
+  ],
+
+  "sections": [
+    { "heading": "AI 요약",            "field": "AI 요약",               "emptyText": "-" },
+    { "heading": "제공 서비스·사업분야", "field": "제공 서비스/사업분야", "emptyText": "-" },
+    { "heading": "보유 기술",          "field": "보유 기술",             "emptyText": "-" },
+    { "heading": "주요 투자자",         "field": "주요 투자사",           "emptyText": "-" }
+  ],
+
+  "linkSection": {
+    "heading": "혁신의숲 링크",
+    "field": "혁신의숲 링크",
+    "linkLabel": "혁신의숲 데이터에서 기업정보 보기 ↗"
+  },
+
+  "panel": { "enabled": false }
+}

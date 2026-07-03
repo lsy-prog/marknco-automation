@@ -1,0 +1,259 @@
+{
+  "programName": "2026 KT K-PATH 롱리스트",
+  "header": {
+    "enabled": false
+  },
+  "footer": {
+    "enabled": false
+  },
+  "outputPrefix": "KPATH_롱리스트프로필",
+  "fileNameField": "기업명",
+  "nameField": "기업명",
+  "subtitleField": "한 줄 소개",
+  "overviewGroups": [
+    {
+      "rows": [
+        {
+          "label": "모집분야",
+          "field": "모집분야",
+          "type": "plain"
+        },
+        {
+          "label": "설립일",
+          "field": "설립일",
+          "type": "plain"
+        },
+        {
+          "label": "대표자명",
+          "field": "대표자명",
+          "type": "plain"
+        },
+        {
+          "label": "홈페이지",
+          "field": "홈페이지",
+          "type": "link"
+        },
+        {
+          "label": "성과키워드",
+          "field": "성과키워드",
+          "type": "plain"
+        },
+        {
+          "label": "최신고용인원",
+          "field": "최신고용인원",
+          "type": "plain"
+        }
+      ]
+    },
+    {
+      "rows": [
+        {
+          "label": "최신투자단계",
+          "field": "최신투자단계",
+          "type": "plain",
+          "span": 2
+        },
+        {
+          "label": "최신투자일",
+          "field": "최신투자일",
+          "type": "plain"
+        },
+        {
+          "label": "최신투자금액",
+          "field": "최신투자금액(원)",
+          "type": "money"
+        },
+        {
+          "label": "누적투자금액",
+          "field": "누적투자금액(원)",
+          "type": "money"
+        },
+        {
+          "label": "기업가치 최대추정액",
+          "field": "기업가치 최대추정액(원)",
+          "type": "money"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "heading": "AI 요약",
+      "field": "AI 요약",
+      "emptyText": "-"
+    },
+    {
+      "heading": "제공 서비스·사업분야",
+      "field": "제공 서비스/사업분야",
+      "emptyText": "-"
+    },
+    {
+      "heading": "보유 기술",
+      "field": "보유 기술",
+      "emptyText": "-"
+    },
+    {
+      "heading": "주요 투자자",
+      "field": "주요 투자사",
+      "emptyText": "-"
+    }
+  ],
+  "linkSection": {
+    "heading": "혁신의숲 링크",
+    "field": "혁신의숲 링크",
+    "linkLabel": "혁신의숲 데이터에서 기업정보 보기 ↗"
+  },
+  "panel": {
+    "enabled": false
+  },
+  "dataTables": [
+    {
+      "heading": "고용 현황",
+      "chartField": "__chart_employment",
+      "chartAspect": 4.754901960784314,
+      "chartWidthPx": 640,
+      "columns": [
+        "최근월 근무인원",
+        "누적 입사자",
+        "누적 퇴사자",
+        "순증감"
+      ],
+      "rows": [
+        {
+          "label": "17개월 누적(25.01~26.05)",
+          "fields": [
+            "__emp_latest",
+            "__emp_hires_sum",
+            "__emp_leaves_sum",
+            "__emp_net_change"
+          ],
+          "types": [
+            "number",
+            "number",
+            "number",
+            "number"
+          ],
+          "unit": "명"
+        }
+      ]
+    },
+    {
+      "heading": "재무 현황 (자산·부채·자본)",
+      "chartField": "__chart_financial",
+      "chartAspect": 4.337899543378995,
+      "chartWidthPx": 620,
+      "columns": [
+        "2023",
+        "2024",
+        "2025",
+        "3개년 성장률"
+      ],
+      "rows": [
+        {
+          "label": "자산",
+          "fields": [
+            "2023년 자산",
+            "2024년 자산",
+            "2025년 자산",
+            "최근 3개년 재무 성장률"
+          ],
+          "types": [
+            "money",
+            "money",
+            "money",
+            "percent"
+          ]
+        },
+        {
+          "label": "부채",
+          "fields": [
+            "2023년 부채",
+            "2024년 부채",
+            "2025년 부채",
+            "부채성장률_3개년"
+          ],
+          "types": [
+            "money",
+            "money",
+            "money",
+            "percent"
+          ]
+        },
+        {
+          "label": "자본",
+          "fields": [
+            "2023년 자본",
+            "2024년 자본",
+            "2025년 자본",
+            "자본성장률_3개년"
+          ],
+          "types": [
+            "money",
+            "money",
+            "money",
+            "percent"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "매출·손익 현황",
+      "chartField": "__chart_revenue",
+      "chartAspect": 4.337899543378995,
+      "chartWidthPx": 620,
+      "columns": [
+        "2023",
+        "2024",
+        "2025",
+        "3개년 성장률"
+      ],
+      "rows": [
+        {
+          "label": "매출액",
+          "fields": [
+            "2023년 매출(원)",
+            "2024년 매출(원)",
+            "2025년 매출(원)",
+            "3개년 매출(원) 성장률"
+          ],
+          "types": [
+            "money",
+            "money",
+            "money",
+            "percent"
+          ]
+        },
+        {
+          "label": "영업이익",
+          "fields": [
+            "2023 영업이익",
+            "2024 영업이익",
+            "2025 영업이익",
+            "3개년 영업이익 성장률"
+          ],
+          "types": [
+            "money",
+            "money",
+            "money",
+            "percent"
+          ]
+        },
+        {
+          "label": "순이익",
+          "fields": [
+            "2023 순이익",
+            "2024 순이익",
+            "2025 순이익",
+            "3개년 순이익 성장률"
+          ],
+          "types": [
+            "money",
+            "money",
+            "money",
+            "percent"
+          ]
+        }
+      ]
+    }
+  ]
+}
