@@ -1,0 +1,8 @@
+{
+  "name": "marknco-automation",
+  "private": true,
+  "description": "K-PATH 기업 프로필 PDF 자동 생성 파이프라인 의존성",
+  "dependencies": {
+    "docx": "^9.7.1"
+  }
+}
