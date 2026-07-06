@@ -1,0 +1,7 @@
+openpyxl
+matplotlib
+pdfplumber
+cffi
+cryptography
+defusedxml
+lxml
